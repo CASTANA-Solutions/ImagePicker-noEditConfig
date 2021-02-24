@@ -3,6 +3,25 @@ cordova-imagePicker
 
 Cordova Plugin For Multiple Image Selection - implemented for iOS and Android 4.0 and above.
 
+## Purpose of the fork
+
+tldr; use in combination with https://github.com/CASTANA-Solutions/cordova-plugin-cleartext
+
+Combination of this plugin with cordova-plugin-cleartext leads to a conflict:
+both plugins use the edit-config setting
+
+See cordova documentation: https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#edit-config
+
+While this can be mitigated by using --force for local command line builds, this is not possible with online services like VoltBuilder.
+
+This fork has its edit-config setting removed and the contained application setting is included in the cleartext plugin 
+
+```
+<edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+    <application android:requestLegacyExternalStorage="true" />
+</edit-config>
+```
+
 ## Installing the plugin
 
 The plugin conforms to the Cordova plugin specification, it can be installed
