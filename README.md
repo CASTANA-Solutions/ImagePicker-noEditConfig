@@ -5,16 +5,13 @@ Cordova Plugin For Multiple Image Selection - implemented for iOS and Android 4.
 
 ## Purpose of the fork
 
-tldr; use in combination with https://github.com/CASTANA-Solutions/cordova-plugin-cleartext
-
-Combination of this plugin with cordova-plugin-cleartext leads to a conflict:
-both plugins use the edit-config setting
+Combination of this plugin with other plugins/configurations leads to a conflict, if there are multiple edit-config settings.
 
 See cordova documentation: https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#edit-config
 
 While this can be mitigated by using --force for local command line builds, this is not possible with online services like VoltBuilder.
 
-This fork has its edit-config setting removed and the contained application setting is included in the cleartext plugin 
+This fork has its edit-config setting removed and the contained application setting must be included in config.xml or another plugin.
 
 ```
 <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
