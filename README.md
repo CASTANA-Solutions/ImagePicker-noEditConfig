@@ -1,7 +1,11 @@
-cordova-imagePicker
-===================
+cordova-plugin-telerik-imagepicker
+==================================
 
 Cordova Plugin For Multiple Image Selection - implemented for iOS and Android 4.0 and above.
+
+# Fork information
+
+Forked from https://github.com/Telerik-Verified-Plugins/ImagePicker, version 2.3.5
 
 ## Purpose of the fork
 
